@@ -1,7 +1,7 @@
 # Data Science Individual Projcet
 
 ## Introduction
-For my individual project, I found a dataset that has to do with one of my favorite hobbies - Dungeons & Dragons! This dataset had information about characters such as their inventories, feats, levels, and more.
+For my individual project, I found a dataset that has to do with one of my favorite hobbies - Dungeons & Dragons! This dataset had information about characters such as their inventories, feats, levels, and more. I wanted to know what people liked - what classes were popular? What items were popular? Which race was best for what class? What feats were used the most? How much gold do people have? These were all questions I had going into this project.
 
 ## Selection of Data
 For my data, I found a very in-depth dataset on Kaggle using information from the popular D&D character creation website, D&D Beyond. The data set had many columns:
