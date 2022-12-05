@@ -202,11 +202,84 @@ After this, we convert this to a dataframe, and then map it as we did with class
 Now that we're done talking about our methods and how we're getting our information, let's check out the results.
 
 ## Results
+Now that we have our methods, let's check out our results, starting with average gold.
+![gold](https://github.com/Caldraeus/dndbeyond-analysis/blob/master/images/avg_gold.png?raw=true)
+Here, we see a pretty interesting spread of data. Characters start with more gold at level one than later levels, then dip down, then the gold rises (with a few dips along the way) until we hit level 16, where it goes down. Then, from level 18 to level 19, there's a massive jump, until we then drop a lot at level 20. Quite the datapoint rollercoaster, for something I imagined would be pretty linear! I have a few theories as to why this is, which we will talk about in the discussion section.
 
+![class_feat](https://github.com/Caldraeus/dndbeyond-analysis/blob/master/images/class_feat.png?raw=true)
+Here were the results for our most popular feat by class. It's a little bit condensed on the x-axis, but I did as much as I could to make it readable.
+
+Here, we can see that grappler is the most popular feat overall - in fact, it's mostly popular with fighters, which makes sense - fighters can make the most out of this feat!
+
+Additionally, you can see that "sharpshooter" is popular amongst Rangers. Ranger is traditionally the "ranged" class, and sharpshooter is a feat that supports a ranged playstyle, so it makes sense. I will expand more on this in the following section as well.
+
+![feats](https://github.com/Caldraeus/dndbeyond-analysis/blob/master/images/feat_popularity.png?raw=true)
+Here's a second feat visualization showing the most popular feats amongst all classes. Note the abnormally high spike in Grappler - there is a reason for this beyond it just being a popular feat.
+
+![class_race](https://github.com/Caldraeus/dndbeyond-analysis/blob/master/images/class_race.png?raw=true)
+Here, we can see the most popular races among classes! The popular D&D joke about "Human Fighter" being the most overused class/race combo isn't just a joke - it appears it's grounded in reality. Additionally, we see that elves are used a lot for rangers, which I found interesting. 
+
+![class_pop](https://github.com/Caldraeus/dndbeyond-analysis/blob/master/images/total_classes.png?raw=true)
+Here, we can see the most popular D&D classes overall. We can see clearly that Fighter is the most popular, while Druid is the least popular. Cleric seems to fall directly in the middle, and to my surprise, Warlock wasn't as popular as I had predicted.
+
+![items](https://github.com/Caldraeus/dndbeyond-analysis/blob/master/images/item_popularity.png?raw=true)
+Finally, we can see the most popular items among inventories of characters. These results weren't too unexpected, for the most part. It makes perfect sense that a backpack is the most common item, considering you need it to carry your other items. This is then followed by dagger and rations (1 day). These also made sense, since a lot of people start with a dagger as a backup weapon, and everyone carries multiple instances of 1-day rations in order to eat!
 ## Discussion
+Now that we've reviewed our data visualizations, let's talk about what the implications of this data are.
+
+First, let's consider what we saw in the average gold per level chart. There are a few important things of note;
+1. Level 1 characters had more gold than level 2 and 3 characters.
+2. From levels 16 to 18, there is a noticeable dip in gold.
+3. Gold peaks at level 19, then dips at level 20.
+
+Now, I have a few ideas as to why these trends happen. 
+1. Level 1 characters are fresh - they have not had time to spend their gold yet, unlike level 2 and 3 characters, who have likely spent money on healing potions or other items.
+2. Level 16 through 18 characters likely buy better items, or spend all their money, as a lot of campaigns end around this level - meaning they spend the rest of their money before the game ends.
+3. Level 20 characters are incredibly powerful - it is likely that, at this point, money has no worth to them, so they just buy whatever. It is also likely that campaigns end at level 20 as well, meaning they also spend the rest of their money.
+
+These are just a few of my initial thoughts as to why there might be these trends in the gold per-level chart. Next, let's check out the most popular feats per class.
+___
+Here, we've got a large heatmap comparing feat popularity amongst classes, as well as a bar plot of the most popular feats overall. Grappler is the most used overall, primarily for fighters, which makes sense. On D&D Beyond, the website this data is stripped from, free accounts can only use one feat - the grappler feat. Therefore, the "popularity" of the grappler feat is skewed by the limitations the website has.
+
+Interestingly, svirfneblin magic is one of the most used feats for characters in this dataset, which is very interesting. Svirfneblin magic (SM) isn't a very common feat - it's restricted to a specific race, so I'm not entirely sure why it's so popular on D&D beyond. Perhaps there are a lot of characters that took SM as a test, or maybe this data was collected when SM first came out, so more people had taken it to use it.
+
+Finally, the usefulness of this heatmap comes when determining which feat to take depending on what class you're playing. For example, let's imagine you're playing a Ranger. When we look at the heatmap, we see that the most popular feat (ignoring Grappler) is Sharpshooter! This makes sense, as sharpshooter is a feat that works very well with Ranger's playstyle. 
+
+This heatmap could also be useful for the designers of D&D, Wizards of The Coast (WotC), to determine which feats might be good or bad in design. If a feat has little to no use, that means it's either bad, unfun or just uninteresting. However, if a feat is used a lot (such as grappler, sharpshooter, war caster), that means that it's well designed or powerful, or in some cases, too powerful. These metrics can be useful for WotC to determine how to design future feats.
+___
+Next, we can take a look at our second heatmap, displaying the most popular race/class combination. This, like the feat/class heatmap, can be useful for many of the same reasons. Let's say, for example, you're playing a Druid - which race do you play, if you're new to D&D, and want to do something that's known to be good? Well, when you take a look at our heatmap, you can see that Elf seems to be the most used race for Druid! 
+
+Another thing that was interesting here, is that Human/Fighter is the most common race/class combination. As I have mentioned before, there is a very common joke in the D&D community about Human Fighters being the most common and most boring or generic D&D characters out there. It's interesting to see that this joke is grounded in reality, as the Human/Fighter combo shows up more than any other combination in the game.
+
+Like the previous heatmap, this is a good metric for WotC game designers to determine what is popular and well designed, and unpopular or less designed. For example, the heatmap shows that Yuan-ti Pureblood is barely used, no matter the class. This gives the WotC game designers a reason to go back and determine why this is - perhaps it's boring, or just not a powerful choice for players.
+___
+Next, we have a small bar graph displaying the popularity of classes overall. Knowing what we know about the Human/Fighter popularity, it comes as no surprise that Fighter is the most popular class. It also is no surprise that most of the spellcaster classes (Warlock, Wizard, Sorcerer, Cleric, Druid) are a little bit lower than the martial classes (Ranger, Fighter, Paladin, Barbarian).* Spellcaster-centerered classes can be a little bit more difficult for new players, as they have complicated mechanics and a lot to keep track of. Additionally, at earlier levels, spellcasters can feel weaker or less fun than the martial classes, which could play a factor in their popularity.
+
+This information can be useful for new players, who are unsure of which class to play. If they want to go with something more popular, easier to understand, and powerful, they can take a look at the popularity chart and go with something near the top, such as Fighter.
+
+One thing about this data that stood out to me was how low Barbarian was on the popularity list. Barbarian has always been one of the classes I had seen a lot of in my real-life games, so I had expected it to be higher on the list - it's easy to play, fun, and powerful. But the data showed that it wasn't as popular as I thought it to be.
+
+###### *While these classes can also have spellcasting at higher levels, they are less spellcasting heavy overall.
+___
+Finally, we have the popularity of inventory items. This data is not unexpected. When you start off in D&D, you are asked to choose a “pack”. These packs have varied items, but almost all of them come with a backpack, a mess kit, a torch, a bedroll, clothes (common), and 50 feet of rope. All of these items make appearances in our top 15 items, which makes perfect sense.
+
+Something that’s interesting here as well as the popularity of weapons. In D&D, you have a lot of choices for what weapons to take. According to the table, it appears Daggers, Shields, and Short Swords are the most commonly used, which is an interesting trend. 
+
+This data can be useful for players trying to figure out what items to take or buy when they go to a shop. I never considered the usefulness of having a spare dagger in D&D - maybe I’ll give it a shot next time I play!
 
 ## Summary
+In summary, these are the most important things to note from this data.
+- Human Fighters are the most popular class combination, followed by Elven Ranger and Tiefling Warlock
+- Grappler is a popular feat on D&D beyond, followed by War Caster, and then SM
+- Gold peaks before the 20th level and 16th level, so if you know your campaign is ending soon and you're near those levels, you can spend it knowing you won't need to worry about having less at the next levels/afterward.
+- The most popular class is fighter, and the least popular class is druid.
+- Most characters carry a spare dagger, shield, or crowbar
 
+This information is good for new players trying to make a well-rounded character, or perhaps for more veteran players wanting to work outside the box and create something more unique, like a Triton Monk with the Healer feat.
+
+Additionally, WotC game designers can review this information to help create new content or balance existing content for the betterment of game health and enjoyability.
+
+This concludes my analysis of the D&D Beyond dataset! Thank you for reading.
 ## References
 https://www.kaggle.com/datasets/maximebonnin/dnd-characters-test/code?resource=download
 
